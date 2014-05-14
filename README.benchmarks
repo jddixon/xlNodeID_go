@@ -1,4 +1,4 @@
-xlattice_go/nodeID/README.benchmarks
+xlNodeID_go/README.benchmarks
 
 
 To run benchmarks using gocheck:

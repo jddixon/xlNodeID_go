@@ -1,6 +1,6 @@
 package nodeID
 
-// xlattice_go/nodeID/idMapHAMT_perf_test.go
+// xlNodeID_go/idMapHAMT_perf_test.go
 
 /////////////////////////////////////////////////////////////////////
 // THIS NEEDS TO BE RUN WITH
@@ -10,8 +10,6 @@ package nodeID
 import (
 	"bytes"
 	"fmt"
-	//gh "github.com/jddixon/hamt_go"
-	//xr "github.com/jddixon/xlattice_go/rnglib"
 	. "gopkg.in/check.v1"
 	"time"
 )

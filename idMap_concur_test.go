@@ -1,6 +1,6 @@
 package nodeID
 
-// xlattice_go/nodeID/idMap_concur_test.go
+// xlNodeID_go/idMap_concur_test.go
 
 import (
 	"bytes"

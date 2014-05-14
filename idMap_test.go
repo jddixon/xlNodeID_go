@@ -1,13 +1,13 @@
 package nodeID
 
-// xlattice_go/nodeID/idMap_test.go
+// xlNodeID_go/idMap_test.go
 
 import (
 	"bytes"
 	"crypto/rand"
 	"crypto/rsa"
 	"fmt"
-	xr "github.com/jddixon/xlattice_go/rnglib"
+	xr "github.com/jddixon/rnglib_go"
 	. "gopkg.in/check.v1"
 )
 

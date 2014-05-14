@@ -1,6 +1,6 @@
 package nodeID
 
-// xlattice_go/nodeID/idMapHAMT.go
+// xlNodeID_go/idMapHAMT.go
 
 import (
 	"fmt"

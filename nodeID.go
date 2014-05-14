@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/hex"
 	"errors"
-	xr "github.com/jddixon/xlattice_go/rnglib"
+	xr "github.com/jddixon/rnglib_go"
 )
 
 // TAKE CARE: these in bytes; hex values are twice these

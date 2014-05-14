@@ -1,6 +1,6 @@
 package nodeID
 
-// xlattice_go/nodeID/idMap_perf_test.go
+// xlNodeID_go/idMap_perf_test.go
 
 /////////////////////////////////////////////////////////////////////
 // THIS NEEDS TO BE RUN WITH
@@ -11,7 +11,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	xr "github.com/jddixon/xlattice_go/rnglib"
+	xr "github.com/jddixon/rnglib_go"
 	. "gopkg.in/check.v1"
 	"time"
 )

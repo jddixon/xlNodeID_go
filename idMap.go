@@ -1,6 +1,6 @@
 package nodeID
 
-// xlattice_go/nodeID/idMap.go
+// xlNodeID_go/idMap.go
 
 import (
 	"bytes"

@@ -2,7 +2,7 @@ package nodeID
 
 import (
 	"fmt"
-	"github.com/jddixon/xlattice_go/rnglib"
+	xr "github.com/jddixon/rnglib_go"
 	. "gopkg.in/check.v1"
 )
 
@@ -25,7 +25,7 @@ func (s *XLSuite) TestThisAndThat(c *C) {
 		fmt.Println("TEST_THIS_AND_THAT")
 	}
 	var err error
-	rng := rnglib.MakeSimpleRNG()
+	rng := xr.MakeSimpleRNG()
 	v1 := make([]byte, SHA1_LEN)
 	rng.NextBytes(v1)
 	v2 := make([]byte, SHA1_LEN)
@@ -63,7 +63,7 @@ func (s *XLSuite) TestComparator(c *C) {
 	if VERBOSITY > 0 {
 		fmt.Println("TEST_COMPARATOR")
 	}
-	rng := rnglib.MakeSimpleRNG()
+	rng := xr.MakeSimpleRNG()
 	v1 := make([]byte, SHA1_LEN)
 	rng.NextBytes(v1)
 	v3 := make([]byte, SHA3_LEN)
@@ -126,7 +126,7 @@ func (s *XLSuite) TestComparator(c *C) {
 	c.Assert(err, IsNil)
 }
 
-func (s *XLSuite) makeANodeID(c *C, rng *rnglib.PRNG) (id *NodeID) {
+func (s *XLSuite) makeANodeID(c *C, rng *xr.PRNG) (id *NodeID) {
 	var length int
 	if rng.NextBoolean() {
 		length = SHA1_LEN
@@ -140,7 +140,7 @@ func (s *XLSuite) makeANodeID(c *C, rng *rnglib.PRNG) (id *NodeID) {
 	return id
 }
 func (s *XLSuite) TestSameNodeID(c *C) {
-	rng := rnglib.MakeSimpleRNG()
+	rng := xr.MakeSimpleRNG()
 	id1 := s.makeANodeID(c, rng)
 	c.Assert(SameNodeID(id1, id1), Equals, true)
 
