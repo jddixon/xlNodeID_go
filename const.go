@@ -1,7 +1,5 @@
 package nodeID
 
-package hamt_go
-
 const (
 	VERSION      = "0.5.1"
 	VERSION_DATE = "2014-05-16"
