@@ -32,7 +32,8 @@ func (s *XLSuite) doHamtOneWay(c *C, keys [][]byte, N, M, K int,
 
 // Given N values, create M goroutines, each inserting N/M values
 func (s *XLSuite) doHamtMWayTest(c *C, keys [][]byte, N, M int) {
-	m := NewIDMapHAMT(5, 18) // XXX WAS 5,5
+	m, err := NewIDMapHAMT(5, 18) // XXX WAS 5,5
+	c.Assert(err, IsNil)
 
 	chans := make([]chan bool, M)
 	for k := 0; k < M; k++ {

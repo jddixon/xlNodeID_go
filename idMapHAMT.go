@@ -15,13 +15,17 @@ type IDMapHAMT struct {
 	mu sync.RWMutex
 }
 
-func NewIDMapHAMT(w, t uint) *IDMapHAMT {
-	return &IDMapHAMT{h: gh.NewHAMT(w, t)}
+func NewIDMapHAMT(w, t uint) (m *IDMapHAMT, err error) {
+	h, err := gh.NewHAMT(w, t)
+	if err == nil {
+		m = &IDMapHAMT{h: h}
+	}
+	return
 }
 
 // Create an IDMapHAMT with the default parameters w = 4, t = 4
 //
-func NewNewIDMapHAMT() *IDMapHAMT {
+func NewNewIDMapHAMT() (*IDMapHAMT, error) {
 	return NewIDMapHAMT(4, 4)
 }
 

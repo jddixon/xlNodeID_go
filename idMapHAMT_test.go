@@ -58,7 +58,8 @@ func (s *XLSuite) TestHamtTopBottomIDMap(c *C) {
 	}
 	var err error
 
-	m := NewNewIDMapHAMT()
+	m, err := NewNewIDMapHAMT()
+	c.Assert(err, IsNil)
 
 	rng := xr.MakeSimpleRNG()
 	topBNI, bottomBNI := s.makeTopAndBottomBNI(c, rng)
@@ -84,8 +85,8 @@ func (s *XLSuite) TestHamtShallowIDMap(c *C) {
 	if VERBOSITY > 0 {
 		fmt.Println("TEST_HAMT_SHALLOW_ID_MAP")
 	}
-	var err error
-	m := NewNewIDMapHAMT()
+	m, err := NewNewIDMapHAMT()
+	c.Assert(err, IsNil)
 
 	rng := xr.MakeSimpleRNG()
 	// 1 or 2 or 3 is first digit of key, guaranteeing shallownes
@@ -126,8 +127,8 @@ func (s *XLSuite) TestHamtDeeperIDMapHAMT(c *C) {
 	}
 	var err error
 
-	m := NewNewIDMapHAMT()
-
+	m, err := NewNewIDMapHAMT()
+	c.Assert(err, IsNil)
 	rng := xr.MakeSimpleRNG()
 	baseNode1 := s.makeABNI(c, rng, "baseNode1", 1)
 	baseNode12 := s.makeABNI(c, rng, "baseNode12", 1, 2)
@@ -220,7 +221,7 @@ func (s *XLSuite) TestHamtFindID(c *C) {
 	}
 	var err error
 
-	m := NewNewIDMapHAMT()
+	m, err := NewNewIDMapHAMT()
 	c.Assert(err, IsNil)
 
 	rng := xr.MakeSimpleRNG()
