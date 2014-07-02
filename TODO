@@ -1,5 +1,8 @@
 xlNodeID_go/TODO
 
+2014=07-02
+    * consider adding Delete function
+
 2014-05-06
     * re-enable HAMT concurrent test, currently commented out           * DONE
     * modify makeSomeKeys() to return an error if K is less than 8,

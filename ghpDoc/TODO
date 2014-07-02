@@ -1,0 +1,10 @@
+xlNodeID_go/ghpDoc/TODO
+
+2014-07-02
+    * add some figures
+    * need clearer description of algorithm used by idMaps
+
+2014-07-01
+    * add to index.md links to Wikipedia articles on SHA-1 and SHA-3    * DONE
+    * add explanation of xlNodeID functions 
+        - and examples of use
