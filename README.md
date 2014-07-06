@@ -53,3 +53,7 @@ Despite the use of coarse locks, idMap
 Insert and Find operations compare favorbly with that found using the 
 [HAMT](http://en.wikipedia.org/wiki/Hash_array_mapped_trie) algorighm as
 implemented in [hamt_go](http://jddixon.github.io/hamt_go).  
+
+## On-line Documentation
+
+More information on the **xlNodeID_go** project can be found [here](https://jddixon.github.io/xlNodeID_go)
