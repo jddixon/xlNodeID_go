@@ -11,7 +11,7 @@ import (
 var _ = fmt.Print
 
 type IDMapHAMT struct {
-	h  *gh.HAMT
+	h  gh.HAMT
 	mu sync.RWMutex
 }
 
