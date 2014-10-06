@@ -1,8 +1,8 @@
 package nodeID
 
 const (
-	VERSION      = "0.5.1"
-	VERSION_DATE = "2014-05-16"
+	VERSION      = "0.5.2"
+	VERSION_DATE = "2014-10-06"
 )
 
 const (

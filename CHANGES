@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.5.2
+    2014-10-06
+        * modified to conform to hamt_go v1.0.0                     SLCO 1203
 v0.5.1
     2014-05-16
         * modified to conform to hamt_go v0.9.0                     SLOC 1204
