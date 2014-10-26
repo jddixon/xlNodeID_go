@@ -43,7 +43,7 @@ func (s *XLSuite) BenchmarkWithHAMTKeys(c *C) {
 	const MAX_KEY_DEPTH = 16 // bytes
 
 	// build an array of N random-ish K-byte keys
-	K := 32
+	K := 20 
 	N := c.N
 	t0 := time.Now()
 	keys := makeSomeKeys(N, K)

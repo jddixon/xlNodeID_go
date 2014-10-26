@@ -24,7 +24,7 @@ var (
 func New(id []byte) (q *NodeID, err error) {
 	q = new(NodeID)
 	if id == nil {
-		id = make([]byte, SHA3_LEN)
+		id = make([]byte, SHA1_LEN)
 		rng := xr.MakeSystemRNG()
 		rng.NextBytes(id)
 		q._nodeID = id

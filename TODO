@@ -1,5 +1,10 @@
 xlNodeID_go/TODO
 
+2014-10-24
+    * change default key length to 20 bytes, aka SHA1_LEN               * DONE
+    * change perf tests to use 20-byte IDs                              * DONE
+    * commit, push
+
 2014=07-02
     * consider adding Delete function
 
