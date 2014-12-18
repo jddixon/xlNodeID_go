@@ -3,6 +3,7 @@ package nodeID
 import (
 	"fmt"
 	xr "github.com/jddixon/rnglib_go"
+	xu "github.com/jddixon/xlUtil_go"
 	. "gopkg.in/check.v1"
 )
 
@@ -11,13 +12,13 @@ func (s *XLSuite) TestBadNodeIDs(c *C) {
 		fmt.Println("TEST_BAD_NODE_IDS")
 	}
 	c.Assert(false, Equals, IsValidID(nil))
-	candidate := make([]byte, SHA1_LEN-1)
+	candidate := make([]byte, xu.SHA1_BIN_LEN-1)
 	c.Assert(false, Equals, IsValidID(candidate))
-	candidate = make([]byte, SHA1_LEN)
+	candidate = make([]byte, xu.SHA1_BIN_LEN)
 	c.Assert(true, Equals, IsValidID(candidate))
-	candidate = make([]byte, SHA1_LEN+1)
+	candidate = make([]byte, xu.SHA1_BIN_LEN+1)
 	c.Assert(false, Equals, IsValidID(candidate))
-	candidate = make([]byte, SHA3_LEN)
+	candidate = make([]byte, xu.SHA2_BIN_LEN)
 	c.Assert(true, Equals, IsValidID(candidate))
 }
 func (s *XLSuite) TestThisAndThat(c *C) {
@@ -26,9 +27,9 @@ func (s *XLSuite) TestThisAndThat(c *C) {
 	}
 	var err error
 	rng := xr.MakeSimpleRNG()
-	v1 := make([]byte, SHA1_LEN)
+	v1 := make([]byte, xu.SHA1_BIN_LEN)
 	rng.NextBytes(v1)
-	v2 := make([]byte, SHA1_LEN)
+	v2 := make([]byte, xu.SHA1_BIN_LEN)
 	rng.NextBytes(v2)
 	id1, err := NewNodeID(v1)
 	c.Assert(err, Equals, nil)
@@ -47,9 +48,9 @@ func (s *XLSuite) TestThisAndThat(c *C) {
 	c.Assert(&v1, Not(Equals), &v1a)
 	c.Assert(&v2, Not(Equals), &v2a)
 
-	c.Assert(SHA1_LEN, Equals, len(v1a))
-	c.Assert(SHA1_LEN, Equals, len(v2a))
-	for i := 0; i < SHA1_LEN; i++ {
+	c.Assert(xu.SHA1_BIN_LEN, Equals, len(v1a))
+	c.Assert(xu.SHA1_BIN_LEN, Equals, len(v2a))
+	for i := 0; i < xu.SHA1_BIN_LEN; i++ {
 		c.Assert(v1[i], Equals, v1a[i])
 		c.Assert(v2[i], Equals, v2a[i])
 	}
@@ -64,9 +65,9 @@ func (s *XLSuite) TestComparator(c *C) {
 		fmt.Println("TEST_COMPARATOR")
 	}
 	rng := xr.MakeSimpleRNG()
-	v1 := make([]byte, SHA1_LEN)
+	v1 := make([]byte, xu.SHA1_BIN_LEN)
 	rng.NextBytes(v1)
-	v3 := make([]byte, SHA3_LEN)
+	v3 := make([]byte, xu.SHA2_BIN_LEN)
 	rng.NextBytes(v3)
 	id1, err := NewNodeID(v1) // SHA1
 	c.Assert(err, Equals, nil)
@@ -74,8 +75,8 @@ func (s *XLSuite) TestComparator(c *C) {
 	c.Assert(err, Equals, nil)
 
 	// make clones which will sort before and after v1
-	v1a := make([]byte, SHA1_LEN) // sorts AFTER v1
-	for i := 0; i < SHA1_LEN; i++ {
+	v1a := make([]byte, xu.SHA1_BIN_LEN) // sorts AFTER v1
+	for i := 0; i < xu.SHA1_BIN_LEN; i++ {
 		if v1[i] == 255 {
 			v1a[i] = 255
 		} else {
@@ -83,8 +84,8 @@ func (s *XLSuite) TestComparator(c *C) {
 			break
 		}
 	}
-	v1b := make([]byte, SHA1_LEN) // sorts BEFORE v1
-	for i := 0; i < SHA1_LEN; i++ {
+	v1b := make([]byte, xu.SHA1_BIN_LEN) // sorts BEFORE v1
+	for i := 0; i < xu.SHA1_BIN_LEN; i++ {
 		if v1[i] == 0 {
 			v1b[i] = 0
 		} else {
@@ -129,9 +130,9 @@ func (s *XLSuite) TestComparator(c *C) {
 func (s *XLSuite) makeANodeID(c *C, rng *xr.PRNG) (id *NodeID) {
 	var length int
 	if rng.NextBoolean() {
-		length = SHA1_LEN
+		length = xu.SHA1_BIN_LEN
 	} else {
-		length = SHA3_LEN
+		length = xu.SHA2_BIN_LEN
 	}
 	data := make([]byte, length)
 	rng.NextBytes(data)

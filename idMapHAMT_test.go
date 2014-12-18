@@ -6,6 +6,7 @@ import (
 	"bytes"
 	"fmt"
 	xr "github.com/jddixon/rnglib_go"
+	xu "github.com/jddixon/xlUtil_go"
 	. "gopkg.in/check.v1"
 	"time"
 )
@@ -47,7 +48,7 @@ func (s *XLSuite) TestHamtIDMapTools(c *C) {
 	c.Assert(value[0], Equals, byte(1))
 	c.Assert(value[1], Equals, byte(2))
 	c.Assert(value[2], Equals, byte(3))
-	for i := 3; i < SHA1_LEN; i++ {
+	for i := 3; i < xu.SHA1_BIN_LEN; i++ {
 		c.Assert(value[i], Equals, byte(0))
 	}
 

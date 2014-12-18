@@ -5,11 +5,8 @@ import (
 	"encoding/hex"
 	"errors"
 	xr "github.com/jddixon/rnglib_go"
+	xu "github.com/jddixon/xlUtil_go"
 )
-
-// TAKE CARE: these in bytes; hex values are twice these
-const SHA1_LEN = 20
-const SHA3_LEN = 32
 
 // CONSTRUCTORS /////////////////////////////////////////////////////
 type NodeID struct {
@@ -24,7 +21,7 @@ var (
 func New(id []byte) (q *NodeID, err error) {
 	q = new(NodeID)
 	if id == nil {
-		id = make([]byte, SHA1_LEN)
+		id = make([]byte, xu.SHA1_BIN_LEN)
 		rng := xr.MakeSystemRNG()
 		rng.NextBytes(id)
 		q._nodeID = id

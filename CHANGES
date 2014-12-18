@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.0
+    2014-12-18
+        * add SHA256 support, use xlUtil_go SHA-related constants   SLOC 1206
 v0.5.3
     2014-10-24
         * default id length changed to 20 bytes, SHA1_LEN           SLOC 1203

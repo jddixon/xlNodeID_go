@@ -8,6 +8,7 @@ import (
 	"crypto/rsa"
 	"fmt"
 	xr "github.com/jddixon/rnglib_go"
+	xu "github.com/jddixon/xlUtil_go"
 	. "gopkg.in/check.v1"
 )
 
@@ -57,15 +58,15 @@ func (s *XLSuite) makePeerGivenID(c *C, rng *xr.PRNG, name string,
 func (s *XLSuite) makeTopAndBottomBNI(c *C, rng *xr.PRNG) (
 	topBNI, bottomBNI *MockBaseNode) {
 
-	// top contains  a slice of SHA1_LEN 0xFF as NodeID
-	t := make([]byte, SHA1_LEN)
-	for i := 0; i < SHA1_LEN; i++ {
+	// top contains  a slice of xu.SHA1_BIN_LEN 0xFF as NodeID
+	t := make([]byte, xu.SHA1_BIN_LEN)
+	for i := 0; i < xu.SHA1_BIN_LEN; i++ {
 		t[i] = byte(0xff)
 	}
 	topBNI = s.makePeerGivenID(c, rng, "top", t)
 
-	// bottom contains  a slice of SHA1_LEN zeroes as NodeID
-	b := make([]byte, SHA1_LEN)
+	// bottom contains  a slice of xu.SHA1_BIN_LEN zeroes as NodeID
+	b := make([]byte, xu.SHA1_BIN_LEN)
 	bottomBNI = s.makePeerGivenID(c, rng, "bottom", b)
 
 	return topBNI, bottomBNI
@@ -77,7 +78,7 @@ func (s *XLSuite) makeTopAndBottomBNI(c *C, rng *xr.PRNG) (
 func (s *XLSuite) makeABNI(c *C, rng *xr.PRNG, name string, id ...int) (
 	bni *MockBaseNode) {
 
-	t := make([]byte, SHA1_LEN)
+	t := make([]byte, xu.SHA1_BIN_LEN)
 	for i := 0; i < len(id); i++ {
 		t[i] = byte(id[i])
 	}
@@ -100,7 +101,7 @@ func (s *XLSuite) TestIDMapTools(c *C) {
 	c.Assert(value[0], Equals, byte(1))
 	c.Assert(value[1], Equals, byte(2))
 	c.Assert(value[2], Equals, byte(3))
-	for i := 3; i < SHA1_LEN; i++ {
+	for i := 3; i < xu.SHA1_BIN_LEN; i++ {
 		c.Assert(value[i], Equals, byte(0))
 	}
 
