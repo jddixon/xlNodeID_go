@@ -1,4 +1,5 @@
-# xlNodeID_go
+xlNodeID_go
+===========
 
 The NodeID library for the xlattice_go project.
 
@@ -66,3 +67,7 @@ implemented in [hamt_go](http://jddixon.github.io/hamt_go).
 ## On-line Documentation
 
 More information on the **xlNodeID_go** project can be found [here](https://jddixon.github.io/xlNodeID_go)
+
+## On-line Documentation
+More information on the **xlNodeID_go** project can be found 
+[here](https://jddixon.github.io/xlNodeID_go)
