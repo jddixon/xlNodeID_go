@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.1
+    2015-07-01
+        * update .gitignore                                         SLOC 1206
 v0.6.0
     2014-12-18
         * add SHA256 support, use xlUtil_go SHA-related constants   SLOC 1206
