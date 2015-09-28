@@ -11,72 +11,76 @@
 <div class="content">
 <h1 class="libTop">xlNodeID_go</h1>
 
-<p>The NodeID library for the xlattice_go project.</p>
+<p>The <strong>NodeID</strong> library for the xlattice_go project.</p>
 
 <h2>NodeID</h2>
 
-<p>A nodeID is a slice of bytes used to uniquely identify an entity.  The
+<p>A NodeID is a slice of bytes used to uniquely identify an entity.  The
 length of the slice must be either 20 or 32 bytes.</p>
 
-<p>The first is the length of an SHA1 hash and so can be used, for example,
+<p>The first is the length of an <strong>SHA1</strong> hash and so can be used, for example,
 to store the SHA1 hash of a document.</p>
 
-<p><strong>SHA1</strong>, also known as SHA-1, is the Secure Hash Algorithm
+<p><strong>SHA1</strong>, also known as SHA-1, is the <strong>Secure Hash Algorithm</strong>
 designed by the US National Security Agency.
 It is a Federal Information Processing Standard published by the National
 Institute of Science and Technology,
-<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">FIPS180-4</a></p>
+<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">FIPS180-4.</a></p>
 
-<p>In recent years many attempts have been made is crack SHA1, that is to
+<p>In recent years many attempts have been made is crack SHA1, that is, to
 identify two documents whose SHA1 hash is the same.  At this time no such
 hash collision has been found.  Nevertheless SHA1 has been declared obsolete
 (ie, cryptographically insecure) and so there has been a general shift towards
-more secure variants of the hash, one of which is SHA256, which produces a
+more secure variants of the hash, one of which is <strong>SHA-256</strong>, which produces a
 256-bit/32-byte hash.  For simplicity XLattice documents generally refer
 to this as <strong>SHA2</strong>.</p>
 
 <p>Over the last several yerasa competition was held to settle on a
-new and still more secure hash algorithm, SHA3.  The competition was won by
+new and still more secure hash algorithm, <strong>SHA3</strong>.  The competition was won by
 <a href="http://noekeon.org/Keccak-implementation-3.2.pdf">Keccak</a>.</p>
 
 <p>SHA3 is available in a number of variants.  We use Keccak-256, the
 32-byte/256-bit variant.  When XLattice documents refer to <strong>SHA3</strong>, we mean
 Keccak-256.</p>
 
-<p>At this time SHA3 is not quite stabilized and so XLattice prefers SHA256.
-In other words, 32-byte XLattice nodeIDs are conventionally
+<p>At this time SHA3 is not quite stabilized and so XLattice prefers <strong>SHA256</strong>
+as its 32-byte hash.
+In other words, 32-byte XLattice NodeIDs are typically
 SHA2 hashes.</p>
 
 <h2>IDMaps</h2>
 
-<p>Because nodeIDs are used to uniquely identify objects within the XLattice
+<p>Because NodeIDs are used to uniquely identify objects within the XLattice
 universe, it is convenient to have utilities which can store and rapidly
-retrieve nodeIDs and pointers to the associated objects.</p>
+retrieve NodeIDs and pointers to the associated objects.</p>
 
-<p>An idMap is a trie structure which stores keys and pointers to their associated
-values.  A key is a byte slice (and assumed to be a nodeID).  A value can
-be anything at all.</p>
+<p>An <strong>IDMap</strong> is a
+<a href="https://en.wikipedia.org/wiki/Trie">trie</a>
+structure which stores keys and pointers to their associated
+values.  A key is a byte slice and assumed to be a NodeID.<br />
+The value pointed to can be anything at all.</p>
 
-<p>Each idMap has a maximum depth.  This is the length of the longest key can
-can be stored in the idMap.  By default the depth is 32, the length of an
+<p>Each IDMap has a maximum depth.  This is the length of the longest key can
+can be stored in the IDMap.  By default the depth is 32, the length of an
 SHA2 or SHA3 hash.</p>
 
-<p>When a new key is inserted into an idMap, the software searches down the
-existing tree.  At each level there is a 256-cell Map.  If at level N the
+<p>When a new key is inserted into an IDMap, the software searches down the
+existing tree.  At each level there is a 256-cell Map.  If at level <code>N</code> the
 cell indexed by byte N is free, the new key is entered into the Map at
 that level.  If the cell is occupied by a key which differs in the next
-byte, a new Map is created, with the new key and the existing key in their
+byte, a new IDMap is created, with the new key and the existing key in their
 respecitive cells.  If the keys have equal next bytes, insertion recurses
 down the tree, until a difference is found or the maximum depth is reached.</p>
 
-<p>Despite the use of coarse locks, idMap
+<p>Despite the use of coarse locks, IDMap
 Insert and Find operations compare favorbly with that found using the
-<a href="http://en.wikipedia.org/wiki/Hash_array_mapped_trie">HAMT</a> algorighm as
-implemented in <a href="http://jddixon.github.io/hamt_go">hamt_go</a>.</p>
+<a href="http://en.wikipedia.org/wiki/Hash_array_mapped_trie">HAMT</a>
+algorighm as implemented in
+<a href="http://jddixon.github.io/hamt_go">hamt_go.</a></p>
 
-<h2>On-line Documentation</h2>
+<h2>Project Status</h2>
 
-<p>More information on the <strong>xlNodeID_go</strong> project can be found <a href="https://jddixon.github.io/xlNodeID_go">here</a></p>
+<p>Stable and well-tested.</p>
 
 <h2>Licensing</h2>
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />The material on this github.io website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
