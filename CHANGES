@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.2
+    2015-09-28
+        * documentation clarified                                   SLOC 1206
 v0.6.1
     2015-07-01
         * update .gitignore                                         SLOC 1206
