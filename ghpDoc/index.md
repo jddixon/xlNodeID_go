@@ -26,7 +26,7 @@ to this as **SHA2**.
 
 Over the last several yerasa competition was held to settle on a
 new and still more secure hash algorithm, **SHA3**.  The competition was won by
-[Keccak](http://noekeon.org/Keccak-implementation-3.2.pdf).
+[Keccak](http://keccak.noekeon.org/Keccak-implementation-3.2.pdf).
 
 SHA3 is available in a number of variants.  We use Keccak-256, the
 32-byte/256-bit variant.  When XLattice documents refer to **SHA3**, we mean
