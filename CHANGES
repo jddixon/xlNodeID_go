@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.5
+    2016-01-24
+        * minor edits; add countem                                  SLOC 1211
 v0.6.4
     2015-12-23
         * fix dead link
@@ -27,5 +30,6 @@ v0.5.1
 v0.5.0
     2014-05-14
         * split off from xlattice_go as a separate repository       SLOC 1191
+
 
 

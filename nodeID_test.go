@@ -40,11 +40,11 @@ func (s *XLSuite) TestThisAndThat(c *C) {
 	v1a := id1.Value()
 	v2a := id2.Value()
 
-	// XXX gocheck cannot handle these comparisons
+	// XXX test framework cannot handle these comparisons
 	// c.Assert(v1, Not(DeepEquals), v1a)		// 'Deep' is for desperation
 	// c.Assert(v2, Not(Equals), v2a)
 
-	// XXX not sure that gocheck results are meaningful
+	// XXX not sure that test framework results are meaningful
 	c.Assert(&v1, Not(Equals), &v1a)
 	c.Assert(&v2, Not(Equals), &v2a)
 
