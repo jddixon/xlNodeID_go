@@ -14,7 +14,8 @@ to store the SHA1 hash of a document.
 designed by the US National Security Agency.
 It is a Federal Information Processing Standard published by the National
 Institute of Science and Technology,
-[FIPS180-4.](http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf)
+[FIPS180-4](http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf)
+/
 
 In recent years many attempts have been made is crack SHA1, that is, to
 identify two documents whose SHA1 hash is the same.  At this time no such
