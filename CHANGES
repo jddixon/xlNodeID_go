@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.7
+    2016-06-04
+        * add .bkp2U, other bash scripts, .dvcz                     SLOC 1305
 v0.6.6
     2016-02-27
         * update LICENSE                                            SLOC 1211
@@ -33,6 +36,7 @@ v0.5.1
 v0.5.0
     2014-05-14
         * split off from xlattice_go as a separate repository       SLOC 1191
+
 
 
 
