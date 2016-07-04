@@ -7,18 +7,20 @@ zPjEShF9rvcNa9XEy1dKpcDz9Szbm2SlxOgM83fDDGtOq4SSCSqndtxrOvXXPB57
 H1mJV/FmerbXRPm5ERJVNIxtLk7Gr2Ce45FVlWyJGMhpfVlKkkk+bRQ02OFfazJI
 GQIDAQAB
 -----END RSA PUBLIC KEY-----
-xlNodeID_go v0.6.7
-2016-06-05 04:01:11
+xlNodeID_go v0.6.8
+2016-07-04 16:48:12
 # START CONTENT #
 xlNodeID_go
  .copyright 803f3e50518123ef8a08d34f2238e89b62d0c9a2
  .dvcz
-  projCfg 083e28b8596b00f4c89f4ecbb4533fb83cbcb99d
+  builds 36a28bc29b48fb7faf81c11b1d09276c53874f95
+  lastBuildList b62ebb0d9ecf5f0aaa751fd6b8a9c8b3290fc07a
+  projCfg faba10bc410c41f104c55fd835764c5d1308d5ce
   projCfg.local 6315bb3e93def2f9d1946b49867e70287a768ecb
-  version 5db65f64a117af94a77cc9b85e03f9beda59df64
- .gitignore 5bc9125c59fa06a9719d8433ad1fa35fc62e5d4f
+  version 94845abf467f55f26e3d6fcd7182901d243cec31
+ .gitignore af429ab60271ef8943375dc887cbb10d26ee8a7b
  .gitignore.local 051715275742521752e27ad1e1402dbc11b786b8
- CHANGES 27455669092e44643dee2b77ef627fc075339839
+ CHANGES 1b9452cd72a449fc03c07b735110624a3954341d
  LICENSE.md d1cecfadc47b23486f6bc8a863cfdde348c3eb46
  README.benchmarks 6181162b8cc856bbae9750b106a2c7d958fb1c38
  README.md ace7d3db6cb764b7cd9c4fea9018723d1eec665e
@@ -29,6 +31,19 @@ xlNodeID_go
  errors.go 760eec508624087560ff3cf6870c8ca2e4712ba5
  ghpDoc
   TODO 2fa733d166bda9f53523902e95779987ba203219
+  css
+   LICENSE.html5-boilerplate.md ded771b3245b190da0e81c76de5a80d41392c0a6
+   ghp.css 1d6ebe8a6cf8f61f4645a793cb087dfae2420f33
+   main.css 018ed80b8a6e6607bc7c08595fa5a7fa56853885
+   normalize.css cba40c7ce3d558d00ff79d7505ac3d348015ec9c
+  img
+   GitHub-Mark-32px.png fabe53eb72f9b6d3d47cd95aff31ffc45c2fdbf8
+   chunk.jpg de2b27e41f1547fc14b13399f5906b4303b49657
+   chunk2.jpg d0593d312dbb8ea837c17b28cb639726e29ea93b
+   cluster-with-clients.jpg c167d04c0c6b5736ef9fe4cdc3fcce1956fdea78
+   simple-cluster.jpg 6b223ddd25937c1ef75ef328f36fc3436f10bd62
+   xl-registration.jpg 15cbf951f9db173a45428b32dcec87aca83bbdf0
+   xlattice-2014.jpg f185aaad06db71acd9454f31054c62c56d36f37f
   index.md ebc02b8de964ff905c4ee1bfa6f95037aac82d7c
  gocheck_test.go 9dc4540681b8e45881377124f778196693c50029
  idMap.go c78cfd516b685b6221daba843ed2f728760ced3b
@@ -44,7 +59,7 @@ xlNodeID_go
  nodeID_test.go 9cd3c919af33e5039126ddab918ffb4690826adf
  styleit 668944c7dfcf40971ecfa4cee4ae157d503203b4
  test.all 04e495e23d38bda2a2e0775b48572c45cefa18f5
- version.go 0c9292695d0e390b4d4d20bcc2f666a281342156
+ version.go c00a46cb6668fbd5b202d3949335484281a4ad96
 # END CONTENT #
 
-cgpmzSBthKeDW+mhGDBeVfkpbrr8GhBdEy1qWSVIQyBGrOprt7YKrJmz8yd5nVxoww5l1J0u/XJvs5Rxv1TTQaRqhZcU8oYUZt1VDryUt3YwQYyD2iBEiKoJMkI1mjrFcgESZqk6GqVjRJttXYWKEl2q/4xxBQAuSX8P5qgQTQT1dXNARs9KgbyhX5CIZlH37AFNKP+TSZATCt51e+81ejBe9McopAR5AuGPyRDTOyLNcdvldXghqH2YlIt1m/DL1DpTq0gCmoz9L0Bnhbc5xWtmhZT6p2Rynf0vamwqafpqpLYysQwdBft5XGaoXGWReA9UjZF/NcRh94Rt0x+ygA==
+bS9UfIWD5TCCAlTz50lCjfnf9GTPV+baTRc1UMsuW0VNUQJikStk2BCMNopq128gl9eHToU9bfK6tUWT58RtB3ESuyMeklLgutRr2jOJwBLNFlAusEuAfuRterp8HB+WQk30f9FDHDaqSfYScDo/stq0llm8xwHbHNHUyQLFA/PQbzEM2o4YI7XlXignItTm/GCf5WEqCpWvUnoG4PBb4ptsOtdPg1fHD0sV1YjSHQmDqInbD9xzdWch2YboD3Cf+AL7t1VxKgZOSFExJPZVR95p6iwhpEOAkkmJ8zPXQko6Zh2ZMQD5wkL00M260HLpWoaS9uFzJ6Em3L4DxhuxTg==
