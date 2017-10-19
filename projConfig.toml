@@ -1,0 +1,23 @@
+# projConfig.toml for xlNodeID_go
+
+[meta]
+    version = '0.1.0'
+
+[project]
+    name = 'xlNodeID_go'  # distro name
+    package = 'xlNodeID_go'  # internal name
+    proj_dir = '/home/jdd/dev/go/src/github.com/jddixon/xlNodeID_go'
+    main_lang = 'go'
+    version = '0.6.10'
+    version_date = '2017-10-19'
+    author = 'Jim Dixon'
+    author_email = 'jddixon@gmail.com'
+    copyright = '2014-2017'
+    description = 'XLattice NodeID abstraction for Go'
+    dev_status = 'beta'
+    license = 'mit'
+    state = 'shared'
+    url = 'https://jddixon.github.io/xlNodeID_go'
+
+[go]
+    cmds=[]
