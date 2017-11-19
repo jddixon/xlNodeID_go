@@ -1,5 +1,8 @@
 xlNodeID_go/CHANGES
 
+v0.6.11
+    2017-11-18
+        * correct directory structure, config files                 SLOC 1845
 v0.6.10
     2017-10-19
         * add projConfig.toml                                       SLOC 1844
@@ -45,6 +48,7 @@ v0.5.1
 v0.5.0
     2014-05-14
         * split off from xlattice_go as a separate repository       SLOC 1191
+
 
 
 
